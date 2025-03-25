@@ -1,12 +1,9 @@
-struct Question {
-    id: u32,
-    text: String,
-    answer: String,
-}
+mod question;
+use uuid::Uuid;
 
 fn main() {
-    let q1 = Question {
-        id: 1,
+    let q1 = question::Question {
+        id: Uuid::new_v4(),
         text: String::from("Question 1"),
         answer: String::from("Lorem ipsum dolor"),
     };
