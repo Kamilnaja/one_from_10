@@ -1,33 +1,35 @@
-use crate::question;
-use crate::question::Question;
-use uuid::Uuid;
+#[path = "question.rs"]
+mod question; // Declares the question module from question.rs
+use question::Question;
+#[path = "answer.rs"]
+mod answer;
 
 pub fn create_questions() -> Vec<Question> {
     vec![
         question::Question {
-            id: Uuid::new_v4(),
-            text: String::from("Orka na ..."),
-            answer: String::from("Ugurze "),
+            text: String::from("Czy ryba to zwierze?"),
+            answer: 1,
+            answers: vec![],
         },
         question::Question {
-            id: Uuid::new_v4(),
             text: String::from("Ile centymetrów zawiera jeden meter"),
-            answer: String::from("100"),
+            answer: 2,
+            answers: vec![],
         },
         question::Question {
-            id: Uuid::new_v4(),
             text: String::from("Ile milimetrów zawiera jeden centymetr"),
-            answer: String::from("10"),
+            answer: 1,
+            answers: vec![],
         },
         question::Question {
-            id: Uuid::new_v4(),
             text: String::from("Ile metrów zawiera jeden kilometr"),
-            answer: String::from("1000"),
+            answer: 3,
+            answers: vec![],
         },
         question::Question {
-            id: Uuid::new_v4(),
             text: String::from("Ile centymetrów zawiera jeden decymetr"),
-            answer: String::from("10"),
+            answer: 3,
+            answers: vec![],
         },
     ]
 }

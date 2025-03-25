@@ -1,7 +1,8 @@
-use uuid::Uuid;
-
+#[path = "answer.rs"]
+mod answer;
+use answer::Answer;
 pub struct Question {
-    pub id: Uuid,
     pub text: String,
-    pub answer: String,
+    pub answer: u8,
+    pub answers: Vec<Answer>,
 }

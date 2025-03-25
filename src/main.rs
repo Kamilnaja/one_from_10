@@ -1,6 +1,4 @@
 mod create_questions;
-mod question;
-
 fn main() {
     println!("Witamy w teleturnieju 1 z 10");
     let questions = create_questions::create_questions();
