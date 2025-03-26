@@ -1,6 +1,4 @@
-#[path = "answer.rs"]
-mod answer;
-use answer::Answer;
+use crate::answer::Answer;
 pub struct Question {
     pub text: String,
     pub answer: u8,

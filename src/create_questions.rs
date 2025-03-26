@@ -1,32 +1,32 @@
-#[path = "question.rs"]
-mod question; // Declares the question module from question.rs
-use question::Question;
-#[path = "answer.rs"]
-mod answer;
+use crate::answer::Answer;
+use crate::question::Question;
 
 pub fn create_questions() -> Vec<Question> {
     vec![
-        question::Question {
+        Question {
             text: String::from("Czy ryba to zwierze?"),
             answer: 1,
-            answers: vec![],
+            answers: vec![Answer {
+                text: String::from("Tak"),
+                is_correct: true,
+            }],
         },
-        question::Question {
+        Question {
             text: String::from("Ile centymetrów zawiera jeden meter"),
             answer: 2,
             answers: vec![],
         },
-        question::Question {
+        Question {
             text: String::from("Ile milimetrów zawiera jeden centymetr"),
             answer: 1,
             answers: vec![],
         },
-        question::Question {
+        Question {
             text: String::from("Ile metrów zawiera jeden kilometr"),
             answer: 3,
             answers: vec![],
         },
-        question::Question {
+        Question {
             text: String::from("Ile centymetrów zawiera jeden decymetr"),
             answer: 3,
             answers: vec![],
