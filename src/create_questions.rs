@@ -5,31 +5,42 @@ pub fn create_questions() -> Vec<Question> {
     vec![
         Question {
             text: String::from("Czy ryba to zwierze?"),
-            answer: 1,
-            answers: vec![Answer {
-                text: String::from("Tak"),
-                is_correct: true,
-            }],
+            answers: vec![
+                Answer {
+                    text: String::from("Tak"),
+                    is_correct: true,
+                },
+                Answer {
+                    text: String::from("Nie"),
+                    is_correct: false,
+                },
+            ],
         },
         Question {
-            text: String::from("Ile centymetrów zawiera jeden meter"),
-            answer: 2,
-            answers: vec![],
+            text: String::from("Jakiego koloru jest trawa"),
+            answers: vec![
+                Answer {
+                    text: String::from("Zielona"),
+                    is_correct: true,
+                },
+                Answer {
+                    text: String::from("Czerwona"),
+                    is_correct: false,
+                },
+            ],
         },
         Question {
-            text: String::from("Ile milimetrów zawiera jeden centymetr"),
-            answer: 1,
-            answers: vec![],
-        },
-        Question {
-            text: String::from("Ile metrów zawiera jeden kilometr"),
-            answer: 3,
-            answers: vec![],
-        },
-        Question {
-            text: String::from("Ile centymetrów zawiera jeden decymetr"),
-            answer: 3,
-            answers: vec![],
+            text: String::from("Ile nóg ma pająk"),
+            answers: vec![
+                Answer {
+                    text: String::from("4"),
+                    is_correct: false,
+                },
+                Answer {
+                    text: String::from("8"),
+                    is_correct: true,
+                },
+            ],
         },
     ]
 }
