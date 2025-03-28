@@ -1,11 +1,12 @@
 use crate::answer::Answer;
+use crate::question::build_question;
 use crate::question::Question;
 
 pub fn create_questions() -> Vec<Question> {
     vec![
-        Question {
-            text: String::from("Czy ryba to zwierze?"),
-            answers: vec![
+        build_question(
+            String::from("Czy ryba to zwierze?"),
+            vec![
                 Answer {
                     text: String::from("Tak"),
                     is_correct: true,
@@ -15,10 +16,10 @@ pub fn create_questions() -> Vec<Question> {
                     is_correct: false,
                 },
             ],
-        },
-        Question {
-            text: String::from("Jakiego koloru jest trawa"),
-            answers: vec![
+        ),
+        build_question(
+            String::from("Jakiego koloru jest trawa"),
+            vec![
                 Answer {
                     text: String::from("Zielona"),
                     is_correct: true,
@@ -28,10 +29,10 @@ pub fn create_questions() -> Vec<Question> {
                     is_correct: false,
                 },
             ],
-        },
-        Question {
-            text: String::from("Ile nóg ma pająk"),
-            answers: vec![
+        ),
+        build_question(
+            String::from("Ile nóg ma pająk"),
+            vec![
                 Answer {
                     text: String::from("4"),
                     is_correct: false,
@@ -41,6 +42,6 @@ pub fn create_questions() -> Vec<Question> {
                     is_correct: true,
                 },
             ],
-        },
+        ),
     ]
 }
